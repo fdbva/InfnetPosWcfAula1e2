@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{70E280EA-5430-41EE-A974-004829F1708B}</ProjectGuid>
+    <ProjectGuid>{3D6A2030-13F0-4B6A-8A60-BCB833FF0A5D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProductFactory</RootNamespace>
-    <AssemblyName>ProductFactory</AssemblyName>
+    <RootNamespace>OrderManager</RootNamespace>
+    <AssemblyName>OrderManager</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,7 +31,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -62,27 +61,58 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProdutctFactoryService.svc" />
+    <Content Include="Connected Services\ProductManagerService\OrderManager.ProductManagerService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ProductManagerService\ProductManagerService.disco" />
+    <None Include="Connected Services\ProductManagerService\configuration91.svcinfo" />
+    <None Include="Connected Services\ProductManagerService\configuration.svcinfo" />
+    <None Include="Connected Services\ProductManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="OrderManagerService.svc" />
     <Content Include="Web.config" />
+    <None Include="Connected Services\ProductManagerService\ProductManagerService.wsdl" />
+    <None Include="Connected Services\ProductManagerService\ProductManagerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProductManagerService\ProductManagerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Product.cs" />
-    <Compile Include="ProdutctFactoryService.svc.cs">
-      <DependentUpon>ProdutctFactoryService.svc</DependentUpon>
+    <Compile Include="Connected Services\ProductManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="IProductFactoryService.cs" />
+    <Compile Include="OrderManagerService.svc.cs">
+      <DependentUpon>OrderManagerService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IOrderManagerService.cs" />
+    <Compile Include="Exceptions\OrderStockException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ProductManagerService\ProductManagerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ProductManagerService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -97,9 +127,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>20604</DevelopmentServerPort>
+          <DevelopmentServerPort>61689</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:20604/</IISUrl>
+          <IISUrl>http://localhost:61689/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

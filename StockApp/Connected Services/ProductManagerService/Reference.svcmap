@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="86ab998e-be69-404f-9e17-4397bdea023f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60840/ProductManagerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductManagerService.xsd" MetadataType="Schema" ID="8088249a-27f2-4065-b898-7796dd915e17" SourceId="1" SourceUrl="http://localhost:60840/ProductManagerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductManagerService.disco" MetadataType="Disco" ID="719df35d-57c0-42af-9ca1-de154f31a37f" SourceId="1" SourceUrl="http://localhost:60840/ProductManagerService.svc?disco" />
+    <MetadataFile FileName="ProductManagerService1.xsd" MetadataType="Schema" ID="8020ebb6-c9f2-4858-8a3b-cfe572c11b23" SourceId="1" SourceUrl="http://localhost:60840/ProductManagerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductManagerService.wsdl" MetadataType="Wsdl" ID="01f2d25c-c07a-481a-a2b5-1dabb61330cd" SourceId="1" SourceUrl="http://localhost:60840/ProductManagerService.svc?wsdl" />
+    <MetadataFile FileName="ProductManagerService2.xsd" MetadataType="Schema" ID="d6461768-a59b-4f97-9d37-24ec2fd12885" SourceId="1" SourceUrl="http://localhost:60840/ProductManagerService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
